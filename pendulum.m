@@ -54,13 +54,13 @@ vi = zeros(N, 1);
 ui(1) = l(1) * sin(y(1, 1));
 vi(1) = -l(1) * cos(y(1, 1));
 
-p2(1) = quiver(xi(1), yi(1), ui(1), vi(1), LineWidth=1.5, AutoScale = "off");
+p2(1) = quiver(xi(1), yi(1), ui(1), vi(1), LineWidth = 1.5, AutoScale = "off");
 hold on
 
 [xi, yi, ui, vi] = calcCoord(y, N, l, xi, yi, ui, vi, 1);
 
 for i = 2:N
-    p2(i) = quiver(xi(i), yi(i), ui(i), vi(i), LineWidth=1.5, AutoScale = "off");
+    p2(i) = quiver(xi(i), yi(i), ui(i), vi(i), LineWidth = 1.5, AutoScale = "off");
 end
 
 grid on
