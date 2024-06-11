@@ -7,14 +7,14 @@ close all
 clc
 
 %% data
-N = 3;
-g = 9.81;
-dampingCoeffs = 0.3 * ones(N, 1);
-tSpan = [0 50];
+N = 3;		% number of pendulumzz
+g = 9.81;	% gravity
+dampingCoeffs = 0.3 * ones(N, 1); % damping coefficients for each pendulum
+tSpan = [0 50];	% time span
 
-l = ones(N, 1);
-m = ones(N, 1);
-Y0 = [pi/2; zeros(N-1, 1); zeros(N, 1)];
+l = ones(N, 1);	% lengths of pendulumzz
+m = ones(N, 1);	% masses of pendulumzz
+Y0 = [pi/2; zeros(N-1, 1); zeros(N, 1)]; % initial angular positions and speeds
 
 %% ode
 options = odeset('RelTol', 1e-9, 'AbsTol', 1e-7);
